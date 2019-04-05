@@ -18,7 +18,7 @@ func main() {
 	// Open up our database connection.
 	// I've set up a database on my local machine using phpmyadmin.
 	// The database is called testDb
-	db, _ := sql.Open("mysql", "root:3141592625@tcp(35.187.36.108:3306)/scraping")
+	db, _ := sql.Open("mysql", "root@tcp(localhost:3306)/scraping")
 
 	rows, _ := db.Query("select * from scraping_execution_log") // Note: Ignoring errors for brevity
 	cols, _ := rows.Columns()
